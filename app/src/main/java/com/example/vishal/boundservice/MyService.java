@@ -18,13 +18,24 @@ public class MyService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         return vishBinder;
-    }
+}
 
     public String getCurrentTime() {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.US);
-        return (df.format(new Date()));
+        SimpleDateFormat aa= new SimpleDateFormat("hh:mm:ss a", Locale.ENGLISH);
+        return (aa.format(new Date()));
     }
-
+    public String getCurrentDate() {
+        SimpleDateFormat aa= new SimpleDateFormat("EEEE dd/MM/yyyy ", Locale.ENGLISH);
+        return (aa.format(new Date()));
+    }
+    public String getCurrentDayyear() {
+        SimpleDateFormat aa= new SimpleDateFormat("d", Locale.ENGLISH);
+        return (aa.format(new Date()));
+    }
+    public String getCurrentWeekyear() {
+        SimpleDateFormat aa= new SimpleDateFormat("w", Locale.ENGLISH);
+        return (aa.format(new Date()));
+    }
     public class MyLocalBinder extends Binder{
         MyService getService(){
             return MyService.this;

@@ -9,23 +9,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.vishal.boundservice.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/vishText"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="109dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Whats the Time?"
+        android:text="Display Current Time Information"
         android:id="@+id/vishButton"
-        android:layout_below="@+id/vishText"
+        android:onClick="showTime"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/timeText"
+        android:layout_below="@+id/vishButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="128dp"
-        android:onClick="showTime" />
+        android:layout_marginTop="66dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/dateText"
+        android:layout_below="@+id/timeText"
+        android:layout_alignLeft="@+id/timeText"
+        android:layout_alignStart="@+id/timeText"
+        android:layout_marginTop="66dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/dayyearText"
+        android:layout_below="@+id/dateText"
+        android:layout_alignLeft="@+id/dateText"
+        android:layout_alignStart="@+id/dateText"
+        android:layout_marginTop="66dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/weekyearText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/dayyearText"
+        android:layout_alignStart="@+id/dayyearText"
+        android:layout_marginBottom="66dp" />
+
+
 </RelativeLayout>
